@@ -11,6 +11,10 @@ body {
     box-sizing: border-box;
 }
 
+.game {
+    display: none;
+}
+
 .cardChoiced {
     position: absolute;
     right: 0;
