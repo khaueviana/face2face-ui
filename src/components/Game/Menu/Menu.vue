@@ -59,6 +59,14 @@ export default {
   background-color: orange;
   color: #fff;
 }
+
+.dialogs:hover {
+  background-color: yellow;
+}
+
+.dialogs h2:hover {
+  color: orange;
+}
 </style>
 
 
