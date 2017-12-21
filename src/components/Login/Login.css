@@ -1,0 +1,59 @@
+.login {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1em #666;
+    width: 400px;
+    height: 250px;
+    position:absolute;
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+}
+
+.login h2 {
+    text-align: center;
+    width: 100%;
+    color:orange;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: 0;   
+    border-radius: 5px;
+    box-shadow: 0px 0px 1em #666;
+    width: 100%;
+    margin: 2px;
+}
+
+a {
+    color: orange;
+    text-decoration: none;
+    margin: 10px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+a:hover{
+    color: yellowgreen;
+}
+
+button {
+    margin: 20px 2px 2px 2px;
+    border: 1px solid #ccc;   
+    border-radius: 5px;
+    background-color: orange;
+    box-shadow: 0px 0px 1em #666;
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+}
+
+button:hover {
+    background-color: yellow;
+    color: orange;
+}

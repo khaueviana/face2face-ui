@@ -1,0 +1,35 @@
+.home {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1em #666;
+    width: 50%;
+    height: 50%;
+    position:absolute;
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+}
+
+.home h1 {
+  text-align: center;
+  color: orange;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+ul a {
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  width: 60%;
+}
+
+ul a:hover {
+  background-color: yellow;
+  color: orange;
+}

@@ -1,0 +1,18 @@
+.signup {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1em #666;
+    width: 50%;
+    height: 35%;
+    position:absolute;
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+}
+
+.signup h2 {
+    text-align: center;
+    width: 100%;
+    color:orange;
+}

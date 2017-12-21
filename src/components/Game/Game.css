@@ -1,0 +1,7 @@
+.cardChoiced {
+    position:absolute;
+    left:45%; 
+    bottom:0;
+    margin:auto;
+    width: 200px !important;
+}
