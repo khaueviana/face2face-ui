@@ -17,11 +17,7 @@ Vue.http.interceptors.push((req, next) => {
   if (token) {
     req.headers.set('Authorization', `Bearer ${token}`);
   } else {
-    if (response.status == 401) {
-      router.push({
-        name: 'login'
-      });
-    }
+    router.push({ name: 'login' });
   }
   next();
 });

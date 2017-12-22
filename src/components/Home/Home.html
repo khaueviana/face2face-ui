@@ -1,8 +1,15 @@
- <div class="home">
+<div class="home">
     <h1>Face2Face - The Game</h1>
 
     <ul>
-        <li><router-link to="/#">Search New Game</router-link></li>
-        <li><router-link to="/game">Create Game</router-link></li>
+        <li>
+            <router-link to="/#">Search New Game</router-link>
+        </li>
+        <li>
+            <router-link to="/game">Create Game</router-link>
+        </li>
+        <li>
+            <router-link to="/login" @click="signout">Exit</router-link>
+        </li>
     </ul>
 </div>
