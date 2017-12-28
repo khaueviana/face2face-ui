@@ -13,20 +13,8 @@
     <my-board></my-board>
     <my-card :image="card.image" :name="card.name" class="cardChoiced"></my-card>
     <my-menu title="Perguntas" class="perguntas">
-        <li>
-            <a href="#">Sexo</a>
-        </li>
-        <li>
-            <a href="#">Cor Pele</a>
-        </li>
-        <li>
-            <a href="#">Olhos</a>
-        </li>
-        <li>
-            <a href="#">Cabelo</a>
-        </li>
-        <li>
-            <a href="#">Outros</a>
+        <li v-for="question in questions" :key="question.id">
+            <a href="#">{{question.description}}</a>
         </li>
     </my-menu>
     <my-timer></my-timer>

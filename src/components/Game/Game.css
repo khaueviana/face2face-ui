@@ -39,4 +39,6 @@
 
 .perguntas {
     right: 0;
+    max-height: 90vh;
+    overflow-y: auto;
 }

@@ -54,6 +54,7 @@ export default {
   font-weight: 900;
   display: inline-block;
   text-align: center;
+  z-index: -1;
 }
 
 .timer img {

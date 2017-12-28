@@ -11,7 +11,7 @@ const router = new VueRouter({
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
-Vue.http.options.root = 'https://face-2-face.herokuapp.com/';
+Vue.http.options.root = 'http://localhost:3000/';
 Vue.http.interceptors.push((req, next) => {
   var token = localStorage.getItem('token');
   if (token) {
