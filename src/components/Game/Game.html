@@ -13,7 +13,7 @@
     <my-board></my-board>
     <my-card :image="card.image" :name="card.name" class="cardChoiced"></my-card>
     <my-menu title="Perguntas" class="perguntas">
-        <li v-for="question in questions" :key="question.id">
+        <li v-for="question in questions" :key="question.id" v-on:click="sendQuestion(question)">
             <a href="#">{{question.description}}</a>
         </li>
     </my-menu>

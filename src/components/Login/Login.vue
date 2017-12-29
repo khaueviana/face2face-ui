@@ -13,6 +13,7 @@ export default {
   },
   created() {
     this.userService = new UserService(this.$resource);
+    
   },
   methods: {
     login() {
