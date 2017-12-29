@@ -5,12 +5,8 @@ export default class GameService{
     }
 
     getQuestions(){
-        var endpoint = this._resource('games/questions')
-        return endpoint.get()
-            .then(response => response.json(), error =>{
-                console.log(error);
-                throw new Error("Não foi possível obter as questões do jogo.")
-            }); 
+        var endpoint = this._resource('games/questions');
+        return endpoint.get().then(response => response.json(), error =>{throw error}); 
     };
 
     sendQuestion(question){
@@ -18,12 +14,12 @@ export default class GameService{
         var player = 'playerOne';
         var resource = `games/${gameId}/questions/${player}/${question.id}`;
         var service = this._resource(resource);
+        return service.get().then(response => response.json(), error => {throw error});
+    };
 
-        return service.get(response => response.json(), error => 
-        { 
-            console.log(error);
-            throw new Error('Ocorreu algo errado ao enviar a questão.');
-        });
+    startGame(){
+        var resource = this._resource('games/start');
+        return resource.save().then(response => response.json(), error => {throw error});
     };
 }
 

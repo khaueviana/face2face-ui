@@ -29,6 +29,17 @@ export default {
         console.log(error);
       });
 
+    
+    this.gameService
+    .startGame()
+    .then(
+      response => {
+        this.currentGame = response;
+        console.log(response);
+      }, 
+      error => {
+        console.log(error); 
+      });
   },
   data() {
     return {
@@ -39,7 +50,6 @@ export default {
     };
   },
   methods : {
-
     sendQuestion(question){
       this.gameService.sendQuestion(question)
       .then(response => {
@@ -50,10 +60,10 @@ export default {
         console.log(error)
         alert('Ocorreu um erro ao enviar a questão.');
       });
-    }
-
-
-
+    },
+    showMessage(message){
+      alert(message)      
+    },
   }
 };
 </script>
