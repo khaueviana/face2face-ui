@@ -1,9 +1,12 @@
 <template>
     <div class="card">
-        <div class="picture">
-            <img :src="image" :alt="name">
-            <label>{{name}}</label>
-        </div>
+      <div class="front">
+          <div class="picture">
+              <img :src="image" :alt="name">
+              <label>{{name}}</label>
+          </div>      
+      </div>
+      <div class="back">back</div>
     </div>
 </template>
 
@@ -26,6 +29,25 @@ export default {
   margin: 10px;
   background-color: orange;
   border: 1px solid orange;
+}
+
+.card div {
+  /* position: absolute;
+  height: 100%;
+  width: 100%; */
+  background: #fff;
+  text-align: center;
+  /* line-height: 200px; */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+.card .back {
+  background: #222;
+  color: #fff;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
 }
 
 .picture img {
