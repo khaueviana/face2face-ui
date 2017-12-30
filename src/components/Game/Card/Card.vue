@@ -1,13 +1,18 @@
 <template>
-    <div class="card">
-      <div class="front">
-          <div class="picture">
-              <img :src="image" :alt="name">
-              <label>{{name}}</label>
-          </div>      
+  <label>
+      <input type="checkbox" id="flipped" />
+      <div class="card">
+        <div class="front">
+            <div class="picture">
+                <img :src="image" :alt="name">
+            </div>      
+            <label>{{name}}</label>
+        </div>
+        <div class="back">
+          <img src="../../../assets/static/backCard.jpg">
+        </div>
       </div>
-      <div class="back">back</div>
-    </div>
+  </label>
 </template>
 
 <script>
@@ -16,13 +21,25 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+label {
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
 .card {
-  border-radius: 4px;
-  background-color: #fff;
-  box-shadow: 5px 5px 10px black;
-  margin: 5px;
-  padding: 1px;
+  box-shadow: 5px 5px 5px rgba(50, 50, 50, 0.2);
+  position: relative;
+  height: 120px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+  z-index: 20;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
 }
 
 .card .picture {
@@ -32,22 +49,49 @@ export default {
 }
 
 .card div {
-  /* position: absolute;
-  height: 100%;
-  width: 100%; */
   background: #fff;
   text-align: center;
-  /* line-height: 200px; */
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 2px;
 }
 
 .card .back {
-  background: #222;
   color: #fff;
   -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg);
+}
+
+.card .back img {
+  display: none;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+:checked + .card {
+  transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+  box-shadow: 5px -5px 5px rgba(50, 50, 50, 0.2);
+}
+
+:checked + .card .back img {
+  display: inline;
+}
+
+:checked + .card .front {
+  display: none;
+}
+
+label:hover .card {
+  -webkit-transform: rotateX(10deg);
+  transform: rotateX(10deg);
+  box-shadow: 0 10px 10px rgba(50, 50, 50, 0.2);
+}
+
+label:hover :checked + .card {
+  transform: rotateX(170deg);
+  -webkit-transform: rotateX(170deg);
+  box-shadow: 0 -10px 10px rgba(50, 50, 50, 0.2);
 }
 
 .picture img {
@@ -63,5 +107,9 @@ export default {
   text-align: center;
   display: inline-block;
   font-size: 10px;
+}
+
+input[type="checkbox"] {
+  display: none;
 }
 </style>
