@@ -17,7 +17,7 @@ export default {
   created() {
     this.gameService = new GameService(this.$resource);
     
-    this.card = {
+    this.misteryFace = {
       image: "https://facedetection.com/wp-content/uploads/m01-32_gr.jpg",
       name: "Example"
     };
@@ -31,22 +31,21 @@ export default {
 
     
     this.gameService
-    .startGame()
-    .then(
-      response => {
-        this.currentGame = response;
-        console.log(response);
-      }, 
-      error => {
-        console.log(error); 
-      });
+      .startGame()
+      .then(
+        response => {
+          this.game = response;
+          console.log(response);
+        }, 
+        error => {
+          console.log(error); 
+        });
   },
   data() {
     return {
-      card: {},
-      cards: [],
+      misteryFace: {},      
       questions : [],
-      currentGame : {},
+      game : {},
     };
   },
   methods : {
@@ -61,9 +60,7 @@ export default {
         alert('Ocorreu um erro ao enviar a questão.');
       });
     },
-    showMessage(message){
-      alert(message)      
-    },
+    
   }
 };
 </script>

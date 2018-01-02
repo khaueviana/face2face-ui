@@ -10,8 +10,8 @@
             <a href="#">Sair</a>
         </li>
     </my-menu>
-    <my-board></my-board>
-    <my-card :image="card.image" :name="card.name" class="cardChoiced"></my-card>
+    <my-board :cards="game.player.board.characterFrames"></my-board>
+    <my-card :image="misteryFace.image" :name="misteryFace.name" class="cardChoiced"></my-card>
     <my-menu title="Perguntas" class="perguntas">
         <li v-for="question in questions" :key="question.id" v-on:click="sendQuestion(question)">
             <a href="#">{{question.description}}</a>
