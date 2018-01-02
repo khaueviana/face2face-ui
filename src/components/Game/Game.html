@@ -11,7 +11,7 @@
         </li>
     </my-menu>
     <my-board :cards="game.player.board.characterFrames"></my-board>
-    <my-card :image="misteryFace.image" :name="misteryFace.name" class="cardChoiced"></my-card>
+    <my-mistery-card :image="misteryFace.image" :name="misteryFace.name"></my-mistery-card>
     <my-menu title="Perguntas" class="perguntas">
         <li v-for="question in questions" :key="question.id" v-on:click="sendQuestion(question)">
             <a href="#">{{question.description}}</a>

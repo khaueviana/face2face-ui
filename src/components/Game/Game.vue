@@ -2,6 +2,7 @@
 import Menu from "./Menu/Menu.vue";
 import Board from "./Board/Board.vue";
 import Card from "./Card/Card.vue";
+import MisteryCard from "./Card/MisteryCard.vue";
 import Timer from "./Timer/Timer.vue";
 
 import GameService from "./../../domain/gameService";
@@ -12,6 +13,7 @@ export default {
     "my-menu": Menu,
     "my-board": Board,
     "my-card": Card,
+    "my-mistery-card": MisteryCard,    
     "my-timer": Timer
   },
   created() {
