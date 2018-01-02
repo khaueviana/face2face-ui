@@ -54,7 +54,7 @@ export default {
       this.gameService.sendQuestion(question)
       .then(response => {
         console.log(response);
-        alert((response.body.answer)? 'Yes' : 'No');
+        alert((response.answer)? 'Yes' : 'No');
       }, 
       error => {
         console.log(error)
