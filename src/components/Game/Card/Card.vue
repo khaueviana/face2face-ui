@@ -4,12 +4,12 @@
       <div class="card">
         <div class="front">
             <div class="picture">
-                <img :src="image" :alt="name">
-            </div>      
-            <label>{{name}}</label>
+              <img :src="image" :alt="name">
+            </div>
+            <label class="label">{{name}}</label>
         </div>
         <div class="back">
-          <img src="../../../assets/static/backCard.jpg">
+            <img src="../../../assets/static/backCard.jpg">
         </div>
       </div>
   </label>
@@ -31,7 +31,7 @@ label {
 .card {
   box-shadow: 5px 5px 5px rgba(50, 50, 50, 0.2);
   position: relative;
-  height: 120px;
+  height: 196px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transition: all 600ms;
@@ -46,6 +46,14 @@ label {
   margin: 10px;
   background-color: orange;
   border: 1px solid orange;
+  position: absolute;
+  height: 70%;
+  width: 90%;
+}
+
+.card .label {
+  position: absolute;
+  bottom: 0;
 }
 
 .card div {
@@ -75,7 +83,8 @@ label {
 }
 
 :checked + .card .back img {
-  display: inline;
+  display: block;
+  width: 100%;
 }
 
 :checked + .card .front {
@@ -97,6 +106,7 @@ label:hover :checked + .card {
 .picture img {
   padding: 5px;
   width: 100%;
+  height: 100%;
   display: block;
   margin: 0 auto;
   box-sizing: border-box;
