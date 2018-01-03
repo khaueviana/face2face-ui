@@ -1,11 +1,7 @@
 <div class="home">
-    <h1>Face2Face - The Game</h1>
-    <ul>
-        <li>
-            <router-link to="/game">Start Game</router-link>
-        </li>
-        <li>
-            <router-link to="/login" @click="signout">Exit</router-link>
-        </li>
-    </ul>
+    <h1>Face 2 Face - The Game</h1>
+    <div class="home-buttons">
+        <button @click="startGame">Start Game</button>
+        <button @click="signout">Logout</button>
+    </div>
 </div>

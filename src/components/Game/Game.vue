@@ -32,7 +32,9 @@ export default {
       }
     );
 
-    this.gameService.startGame().then(
+    var gameId = localStorage.getItem('gameId');
+    
+    this.gameService.getGame(gameId).then(
       response => {
         this.game = response;
         console.log(response);
@@ -41,6 +43,7 @@ export default {
         console.log(error);
       }
     );
+    
   },
   data() {
     return {

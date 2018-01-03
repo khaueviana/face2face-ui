@@ -21,5 +21,11 @@ export default class GameService{
         var resource = this._resource('games/start');
         return resource.save().then(response => response.json(), error => {throw error});
     };
+
+
+    getGame(gameId){
+        var resource = this._resource(`games/${gameId}`);
+        return resource.get().then(response => response.json(), error => {throw error});
+    };
 }
 

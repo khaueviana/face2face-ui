@@ -16,12 +16,8 @@
   color: orange;
 }
 
-ul {
-  list-style-type: none;
-  text-align: center;
-}
-
-ul a {
+button {
+  border:0;
   background-color: orange;
   color: white;
   border-radius: 5px;
@@ -30,9 +26,16 @@ ul a {
   width: 70%;
   display: inline-block;
   margin: 10px;
+  font-size: 100%;
 }
 
-ul a:hover {
+button:hover{
   background-color: yellow;
   color: orange;
+}
+
+.home-buttons{
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
 }
