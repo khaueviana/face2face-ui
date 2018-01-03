@@ -1,5 +1,5 @@
 <template>
-  <label>
+  <label v-on:click="flipCard(id)">
       <input type="checkbox" id="flipped" />
       <div class="card">
         <div class="front">
@@ -16,8 +16,29 @@
 </template>
 
 <script>
+import GameService from "./../../../domain/gameService";
+
 export default {
-  props: ["image", "name"]
+  created() {
+    this.gameService = new GameService(this.$resource);
+  },
+
+  props: ["image", "name", "id"],
+
+  methods: {
+    flipCard(id) {
+      this.gameService.flipCard(id).then(
+        response => {
+          console.log("flip response em Card.vue", response);
+          //alert(response.answer ? "Yes" : "No");
+        },
+        error => {
+          console.log(error);
+          alert("Ocorreu um erro ao virar a carta.");
+        }
+      );
+    }
+  }
 };
 </script>
 

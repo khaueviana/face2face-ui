@@ -1,7 +1,7 @@
 <template>
     <div class="board">
       <div v-for="card in cards" :key="card.character.id">
-        <my-card :image="'/dist/' + card.image" :name="card.character.name"></my-card>
+        <my-card :image="'/dist/' + card.image" :name="card.character.name" :id="card.character.id"></my-card>
       </div>
     </div>  
 </template>
