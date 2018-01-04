@@ -32,13 +32,13 @@ export default {
   background-color: orange;
   border: 1px solid orange;
   width: 90%;
-  height: 80%;
+  height: 82%;
   margin: 0.5vw;
 }
 
 .picture img {
-  width: 8vw;
-  height: 16vh;
+  width: 100%;
+  height: 100%;
   display: block;
   margin: 0 auto;
   box-sizing: border-box;

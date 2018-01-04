@@ -141,7 +141,7 @@ label:hover :checked + .card {
   width: 100%;
   text-align: center;
   display: inline-block;
-  font-size: 10px;
+  font-size: 1vw;
 }
 
 input[type="checkbox"] {
