@@ -1,8 +1,10 @@
 .finalizar {
+    width: 15vw;
     left: 0;
     max-height: 90vh;
     overflow-y: auto;
     position: absolute;
+    font-size: 1vw;
     bottom: 60px;
 }
 
