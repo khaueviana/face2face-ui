@@ -41,4 +41,11 @@ export default class GameService {
 
         return resource.save(request).then(response => response.json(), error => { throw error });
     };
+
+    endGame(gameId) {
+        const resource = this._resource('games/end');
+        const request = { gameId };
+
+        return resource.save(request).then(response => response.json(), error => { throw error });
+    }
 }

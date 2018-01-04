@@ -57,7 +57,7 @@ export default {
   },
   methods: {
     sendQuestion(question) {
-      var gameId = localStorage.getItem('gameId');
+      var gameId = localStorage.getItem("gameId");
       this.gameService.sendQuestion(gameId, question).then(
         response => {
           console.log(response);
@@ -69,6 +69,7 @@ export default {
         }
       );
     },
+
     sendTipOff(characterId) {
       this.gameService.sendTipOff(characterId).then(
         response => {
@@ -80,6 +81,23 @@ export default {
           alert(error.body.message);
         }
       );
+    },
+
+    endGame() {
+      const confirmed = confirm("Deseja realmente sair do jogo?");
+
+      if (confirmed) {
+        this.gameService.endGame(localStorage.getItem("gameId")).then(
+          response => {
+            localStorage.removeItem("gameId");
+            this.$router.push({ name: "home" });
+          },
+          error => {
+            console.log(error);
+            alert("Ocorreu um erro ao finalizar o jogo.");
+          }
+        );
+      }
     }
   }
 };

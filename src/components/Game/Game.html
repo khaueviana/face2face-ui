@@ -9,7 +9,7 @@
             <a href="#">Minhas Partidas</a>
         </li>
         <li>
-            <a href="#">Sair</a>
+            <a href="#" v-on:click="endGame()">Sair</a>
         </li>
     </my-menu>
     <my-board :cards="game.board.characterFrames"></my-board>
