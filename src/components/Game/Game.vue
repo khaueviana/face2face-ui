@@ -32,7 +32,9 @@ export default {
       }
     );
 
-    this.gameService.startGame().then(
+    var gameId = localStorage.getItem('gameId');
+    
+    this.gameService.getGame(gameId).then(
       response => {
         this.game = response;
         console.log(response);
@@ -41,6 +43,7 @@ export default {
         console.log(error);
       }
     );
+    
   },
   data() {
     return {
@@ -65,6 +68,18 @@ export default {
         error => {
           console.log(error);
           alert("Ocorreu um erro ao enviar a questão.");
+        }
+      );
+    },
+    sendTipOff(characterId) {
+      this.gameService.sendTipOff(characterId).then(
+        response => {
+          console.log(response);
+          alert(response.answer ? "Yes" : "No");
+        },
+        error => {
+          console.log(error);
+          alert("Ocorreu um erro ao enviar carta misteriosa.");
         }
       );
     }

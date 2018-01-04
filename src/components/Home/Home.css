@@ -36,7 +36,13 @@ ul a {
   text-decoration: none;
 }
 
-ul a:hover {
+button:hover{
   background-color: yellow;
   color: orange;
+}
+
+.home-buttons{
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
 }

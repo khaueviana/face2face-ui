@@ -1,4 +1,6 @@
 <div class="game">
+        <h1 v-if="game.isPlayerOne">Player One</h1>
+        <h1 v-else>Player One</h1>
     <my-menu title="Menu">
         <li>
             <a href="#">Meu Perfil</a>
@@ -10,7 +12,7 @@
             <a href="#">Sair</a>
         </li>
     </my-menu>
-    <my-board :cards="game.player.board.characterFrames"></my-board>
+    <my-board :cards="game.board.characterFrames"></my-board>
     <my-mistery-card :image="misteryFace.image" :name="misteryFace.name"></my-mistery-card>
     <my-menu title="Perguntas" class="perguntas">
         <li v-for="question in questions" :key="question.id" v-on:click="sendQuestion(question)">
@@ -18,7 +20,16 @@
         </li>
     </my-menu>
     <my-timer></my-timer>
-    <div class="finalizar">
-        <a href="#">Já sei quem é!</a>
-    </div>
+
+    <my-menu title="Já sei quem é!" class="finalizar">
+        <li v-for="character in game.board.characterFrames" :key="character.character.id" v-on:click="sendTipOff(character.character.id)">
+            <a href="#">{{character.character.name}}</a>
+            <h1 v-if="character.character.status">Yes</h1>
+            <h1 v-else>{{character.character.status}}</h1>
+        </li>
+    </my-menu>
+
+    <!-- <div class="finalizar">
+        <a href="#" v-on:click="sendTipOff(tipOff)" >Já sei quem é!</a>
+    </div> -->
 </div>
