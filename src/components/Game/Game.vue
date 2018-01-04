@@ -75,11 +75,11 @@ export default {
       this.gameService.sendTipOff(characterId).then(
         response => {
           console.log(response);
-          alert(response.answer ? "Yes" : "No");
+          alert(response.answer ? "You Win!" : "You Lose!");
         },
         error => {
           console.log(error);
-          alert("Ocorreu um erro ao enviar carta misteriosa.");
+          alert(error.body.message);
         }
       );
     }
