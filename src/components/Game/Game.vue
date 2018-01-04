@@ -32,8 +32,8 @@ export default {
       }
     );
 
-    var gameId = localStorage.getItem('gameId');
-    
+    var gameId = localStorage.getItem("gameId");
+
     this.gameService.getGame(gameId).then(
       response => {
         this.game = response;
@@ -43,31 +43,29 @@ export default {
         console.log(error);
       }
     );
-    
   },
   data() {
     return {
       misteryFace: {},
       questions: [],
       game: {
-        player: {
-          board: {
-            characterFrames: []
-          }
+        board: {
+          characterFrames: []
         }
       }
     };
   },
   methods: {
     sendQuestion(question) {
-      this.gameService.sendQuestion(question).then(
+      var gameId = localStorage.getItem('gameId');
+      this.gameService.sendQuestion(gameId, question).then(
         response => {
           console.log(response);
           alert(response.answer ? "Yes" : "No");
         },
         error => {
           console.log(error);
-          alert("Ocorreu um erro ao enviar a questão.");
+          alert(error.body.message);
         }
       );
     },
