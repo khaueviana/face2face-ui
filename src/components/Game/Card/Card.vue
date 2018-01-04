@@ -1,6 +1,6 @@
 <template>
-  <label v-on:click="flipCard(id)">
-      <input type="checkbox" id="flipped" />
+  <label>
+      <input type="checkbox" id="flipped" v-on:click="flipCard(id)"/>
       <div class="card">
         <div class="front">
             <div class="picture">

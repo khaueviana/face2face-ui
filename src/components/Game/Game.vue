@@ -70,6 +70,18 @@ export default {
           alert("Ocorreu um erro ao enviar a questão.");
         }
       );
+    },
+    sendTipOff(characterId) {
+      this.gameService.sendTipOff(characterId).then(
+        response => {
+          console.log(response);
+          alert(response.answer ? "Yes" : "No");
+        },
+        error => {
+          console.log(error);
+          alert("Ocorreu um erro ao enviar carta misteriosa.");
+        }
+      );
     }
   }
 };

@@ -30,9 +30,16 @@ export default class GameService {
 
     flipCard(characterId) {
         const gameId = localStorage.getItem("gameId");
-        const player = localStorage.getItem("currentPlayer");
         const resource = this._resource('games/flip');
-        const request = { gameId, player, characterId };
+        const request = { gameId, characterId };
+
+        return resource.save(request).then(response => response.json(), error => { throw error });
+    };
+
+    sendTipOff(characterId) {
+        const gameId = localStorage.getItem("gameId");
+        const resource = this._resource('games/tipoff');
+        const request = { gameId, characterId };
 
         return resource.save(request).then(response => response.json(), error => { throw error });
     };

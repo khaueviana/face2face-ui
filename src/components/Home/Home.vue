@@ -19,7 +19,7 @@ export default {
         this.gameService
         .startGame()
           .then(game => {
-            localStorage.setItem('gameId', game.gameId);
+            localStorage.setItem('gameId', game.gameId);            
             this.$router.push({ name: "game" });
           }, error =>{
             alert('Não foi possível iniciar o jogo!');
