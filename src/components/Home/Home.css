@@ -17,14 +17,8 @@
   font-size: 6vh;
 }
 
-ul {
-  list-style-type: none;
-  text-align: center;
-  border: 0;
-  padding: 0;
-}
-
-ul a {
+button {
+  border:0;
   background-color: orange;
   color: white;
   border-radius: 5px;
@@ -34,6 +28,8 @@ ul a {
   display: inline-block;
   margin: 2vh;
   text-decoration: none;
+  font-size: 100%;
+  cursor: pointer;
 }
 
 button:hover{
