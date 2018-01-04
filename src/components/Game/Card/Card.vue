@@ -9,7 +9,10 @@
             <label class="label">{{name}}</label>
         </div>
         <div class="back">
-            <img src="../../../assets/static/backCard.jpg">
+            <div class="picture">
+              <img src="../../../assets/static/backCard.jpg">
+            </div>
+            <label class="label"></label>            
         </div>
       </div>
   </label>
@@ -31,7 +34,7 @@ label {
 .card {
   box-shadow: 5px 5px 5px rgba(50, 50, 50, 0.2);
   position: relative;
-  height: 196px;
+  height: 100%;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transition: all 600ms;
@@ -42,18 +45,19 @@ label {
   border-style: solid;
 }
 
-.card .picture {
-  margin: 10px;
+.card .picture {  
   background-color: orange;
   border: 1px solid orange;
   position: absolute;
-  height: 70%;
   width: 90%;
+  height: 75%;
+  margin: 0.5vw;
 }
 
 .card .label {
   position: absolute;
   bottom: 0;
+  font-size: 1vw;
 }
 
 .card div {
@@ -68,6 +72,7 @@ label {
   color: #fff;
   -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg);
+  height: 100%;
 }
 
 .card .back img {
@@ -104,7 +109,6 @@ label:hover :checked + .card {
 }
 
 .picture img {
-  padding: 5px;
   width: 100%;
   height: 100%;
   display: block;

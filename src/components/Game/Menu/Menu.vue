@@ -20,11 +20,10 @@ export default {
 .dialogs {
   position: absolute;
   background-color: orange;
-  width: 200px;
+  width: 10vw;
   box-shadow: 0px 0px 1em #666;
   border-radius: 5px;
-  padding: 0 10px 10px 10px;
-  margin: 10px;
+  margin: 1vw;
 }
 
 .dialogs h2 {
@@ -32,6 +31,7 @@ export default {
   color: #fff;
   padding: 5px;
   margin: 2px;
+  font-size: 1.5vw;
 }
 
 .dialogs ul {
@@ -41,18 +41,19 @@ export default {
 }
 
 .dialogs a {
-  padding: 10px;
+  padding: 0.8vw;
   text-decoration: none;
   color: orange;
   border: 1px solid #fff;
   box-sizing: border-box;
   display: inline-block;
-  width: 100%;
-  border-radius: 5px;
-  margin: 2px;
+  width: 98%;
+  border-radius: 0.2vw;
+  margin: 0.1vw;
   box-shadow: 0px 0px 1em #666;
   background-color: #fff;
   font-weight: bold;
+  font-size: 0.9vw;
 }
 
 .dialogs a:hover {

@@ -18,25 +18,27 @@ export default {
   border-radius: 4px;
   background-color: #fff;
   box-shadow: 5px 5px 10px rgba(10, 10, 10, 0.6);
-  margin: 5px;
   padding: 1px;
-
   position: absolute;
   left: 43%;
   bottom: 15px;
   margin: auto;
-  width: 180px !important;
+  width: 10vw;
+  height: 20vh;
 }
 
 .card .picture {
-  margin: 10px;
+  margin: 1vh;
   background-color: orange;
   border: 1px solid orange;
+  width: 90%;
+  height: 80%;
+  margin: 0.5vw;
 }
 
 .picture img {
-  padding: 5px;
-  width: 100%;
+  width: 8vw;
+  height: 16vh;
   display: block;
   margin: 0 auto;
   box-sizing: border-box;
@@ -46,6 +48,6 @@ export default {
   width: 100%;
   text-align: center;
   display: inline-block;
-  font-size: 10px;
+  font-size: 1vw;
 }
 </style>

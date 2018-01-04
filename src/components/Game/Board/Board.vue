@@ -26,20 +26,19 @@ export default {
 <style scoped>
 .board {
   position: absolute;
-  top: 10%;
-  right: 0;
-  bottom: 30%;
-  left: 0;
-  width: 65%;
-  border-radius: 5px;
-  padding: 5px;
-  margin: auto;
-  box-shadow: 0px 0px 1em #666;
-  background-color: #fff;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  grid-column-gap: 5px;
+    top: 10%;
+    right: 0;
+    bottom: 30%;
+    left: 0;
+    width: 59%;
+    border-radius: 0.5vh;
+    padding: 0.5vh;
+    margin: auto;
+    box-shadow: 0px 0px 1em #666;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 5px;
 }
 </style>
 

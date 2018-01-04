@@ -43,14 +43,14 @@ export default {
   position: absolute;
   right: 0;
   background-color: #fff;
-  width: 300px;
+  width: 15vw;
   box-shadow: 0px 0px 1em #666;
   padding: 10px;
   margin: 0px;
   border-radius: 40px 0 0 10px;
   bottom: 60px;
   margin: 1px;
-  font-size: 20px;
+  font-size: 1vw;
   font-weight: 900;
   display: inline-block;
   text-align: center;
